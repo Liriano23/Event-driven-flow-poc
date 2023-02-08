@@ -24,7 +24,7 @@ namespace FunctionApp1
             log.LogInformation("Starting our Event Huv Producer");
             log.LogInformation($"Content: {req.Content.ReadAsStringAsync().Result}");
 
-            string namespaceConnectionString = "Endpoint=sb://event-driven-poc-hub-test1.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=gkwI1lWT8gH5HO77Rw4cnY5B7NCnNQFiTo4M1kM9wDA=";
+            string namespaceConnectionString = "";
             string eventHubName = "poc-event-hub";
 
             EventHubProducerClient producer = new EventHubProducerClient(namespaceConnectionString, eventHubName);
